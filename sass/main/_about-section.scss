@@ -1,0 +1,138 @@
+.about-section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    &__wrapper-img {
+        display: none;
+
+        @media screen and (min-width:768px) {
+            display: block;
+        }
+    }
+
+    &__img-list {
+        @extend %list;
+
+        @include flex();
+        flex-direction: column;
+        gap: 30px;
+
+        @media screen and (min-width: 1280px) {
+            flex-direction: row;
+        }
+    }
+
+    &__img-item {
+        @media screen and (min-width: 1280px) {
+                height: 445px;
+        }
+    }
+
+    &__img {
+        @media screen and (min-width: 1280px) {
+                height: 445px;
+        }
+    }
+
+    &__wrapper-content {
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            max-width: 330px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            max-width: 500px;
+        }
+    }
+
+    &__title {
+        margin-left: 80px;
+        margin-bottom: 20px;
+
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -21.5px;
+            left: 29.5px;
+            transform: rotate(90deg);
+    
+            width: 1px;
+            height: 60px;
+    
+            background-color: $main-dark-font-color;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+
+        font-family: 'Raleway', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+
+        @media screen and (min-width: 1280px) {
+            font-size: 42px;
+            letter-spacing: 2.1px;
+        }
+    }
+
+    &__slogan {
+        margin-bottom: 20px;
+
+        color: $secondary-dark-font-color;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.32px;
+
+        @media screen and (min-width: 1280px) {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.36px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        
+        color: $secondary-dark-font-color;
+        line-height: 26px;
+    }
+
+    &__point-link {
+        display: block;
+        color: $main-dark-font-color;
+
+        &:hover,
+        &:focus {
+            color: $white-color;
+        }
+    }
+}
+
+.wrapper {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 30px;
+
+        @media screen and (min-width: 1280px) {
+            gap: 64px;
+        }
+    }
+}

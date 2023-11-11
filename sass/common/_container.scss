@@ -1,0 +1,11 @@
+.container {
+    @include container(480px, 31px);
+
+    @media screen and (min-width: 768px) {
+        @include container(768px, 39px)
+    }
+
+    @media screen and (min-width: 1280px) {
+        @include container(1280px, 55px)
+    }
+}

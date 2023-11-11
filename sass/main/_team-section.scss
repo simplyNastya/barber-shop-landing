@@ -1,0 +1,130 @@
+.team-section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    background-color: $light-bcg;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        margin-left: 80px;
+
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            margin-left: 200px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -21px;
+            left: 60.5px;
+            transform: rotate(90deg);
+    
+            width: 1px;
+            height: 60px;
+    
+            background-color: $main-dark-font-color;
+
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                left: 189.5px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                left: 84.5px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 44px;
+
+        font-family: 'Raleway', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 2.1px;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            margin-left: 120px;
+        }
+    }
+}
+
+.team-section__list {
+    @extend %list;
+
+    @media screen and (min-width: 1280px) {
+        @include flex($vertical: baseline);
+        gap: 30px;
+    }
+}
+
+.team-section__item {
+    @include flex();
+    flex-direction: column;
+    gap: 30px;
+
+    &:not(:last-child) {
+        margin-bottom: 64px;
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &-text-wrapper {
+        text-align: center;
+    }
+
+    &-title {
+        font-size: 18px;
+        letter-spacing: 0.36px;
+    }
+
+    &-subtitle {
+        color: $accent;
+    }
+}
+
+.team-section__item-social-link-list {
+    @extend %list;
+
+    @include flex();
+    gap: 10px;
+}
+
+.team-section__item-social-link {
+    width: 44px;
+    height: 44px;
+
+    @include flex();
+
+    background-color: $white-color;
+    border-radius: 50%;
+}
+
+.team-section__item-social-link-svg{
+    width: 20px;
+    height: 20px;
+
+    .team-section__item-social-link:hover & {
+        fill: $accent;
+    }
+}

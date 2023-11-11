@@ -1,0 +1,39 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.28px;
+
+    color: $main-dark-font-color;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    padding: 0;
+}
+
+ul {
+    padding-inline-start: 0;
+}

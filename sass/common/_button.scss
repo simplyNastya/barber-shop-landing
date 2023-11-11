@@ -1,0 +1,22 @@
+.button {
+    width: 160px;
+    height: 40px;
+    
+    padding: 12px 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.08px;
+
+    text-transform: uppercase;
+
+    background-color: transparent;
+    border-radius: 25px;
+    border: 1px solid $accent;
+
+    &:hover,
+    &:focus {
+        background-color: $accent;
+        cursor: pointer;
+    }
+}

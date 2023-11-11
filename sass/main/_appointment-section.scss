@@ -1,0 +1,136 @@
+.appointment-section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    background-color: $dark-bcg;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    &__container {
+        @media screen and (min-width: 1280px) {
+            padding-right: 40px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 44px;
+
+        color: #FFF;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 2.1px;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+    }
+}
+
+.appointment-form {
+    @media screen and (max-width: 767px) {
+        max-width: 418px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 67px;
+        margin-bottom: 44px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 30px;
+            justify-content: space-between;
+        }
+    }
+
+    &__label {
+        color: $form-non-active-font-color;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            color: $white-color;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding-left: 70px;
+
+        color: $white-color;
+
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid $form-non-active-font-color;
+
+        outline: 1px solid transparent;
+        outline-offset: -1px;
+
+        &:hover,
+        &focus {
+            border-bottom: 1px solid $white-color;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 330px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 270px;
+        }
+    }
+
+    &__message {
+        resize: none;
+        height: 60px;
+
+        color: $white-color;
+
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid $form-non-active-font-color;
+
+        outline: 1px solid transparent;
+        outline-offset: -1px;
+
+        &:hover,
+        &focus {
+            border-bottom: 1px solid $white-color;
+        }
+    }
+
+    &__button {
+        margin-top: 44px;
+
+        color: $white-color;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.appointment-form__input:hover,
+.appointment-form__input:focus .appointment-form__label {
+    color: $white-color;
+}
+
+.textarea-label {
+    display: grid;
+}
